@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#search-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+input[type=text], select, button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #161616;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+    background-color: #3a3a3a;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    color: #777;
+}
+
+#pagination-container {
+    display: none;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.content-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.content-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 800px;
+    }
+
+    .content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .content-img {
+        max-width: 150px;
+        max-height: 200px;
+        margin-right: 20px;
+    }
+
+    .content-text {
+        flex: 1;
+    }
+
+    #pagination-container {
+        justify-content: center;
+    }
+}

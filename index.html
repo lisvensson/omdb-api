@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>OMDb Search App</title>
+</head>
+<body>
+    <div class="container">
+        <div id="search-container">
+            <h1>OMBd Search</h1>
+            <input type="text" id="input-search" placeholder="Search for title">
+            <select name="year" id="select-year">
+                <option value="">Select year</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013-later">2013 and later</option>
+            </select>
+            <select name="type" id="select-type">
+                <option value="">Select type</option>
+                <option value="movie">Movie</option>
+                <option value="series">Series</option>
+                <option value="game">Game</option>
+            </select>
+            <button type="button" id="button-search" onclick="fetchSearch(1)">Search</button>
+        </div>
+        <div id="content-container">
+            <!-- 
+            <div class="content">
+                <img class="content-img" src="#" alt="">
+                <div class="content-text">
+                    <h2 class="content-title">Title</h2>
+                    <p class="content-year">Year</p>
+                    <p class="content-type">Type</p>
+                </div>
+            </div> 
+            -->
+        </div>
+        <div id="pagination-container">
+            <button type="button" id="button-previous" onclick="changePage(-1)">Previous</button>
+            <button type="button" id="button-next" onclick="changePage(1)">Next</button>
+        </div>
+    </div>
+   <script src="js/main.js"></script>
+   <script src="js/config.js"></script>
+</body>
+</html>
